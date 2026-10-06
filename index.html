@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5eee4">
+  <title>台南兩天一夜｜小旅行行程</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #382f27;
+      --muted: #756b5e;
+      --paper: #fff9ed;
+      --sand: #eee3d1;
+      --terracotta: #a85b42;
+      --line: #dfcfb7;
+      --green: #4d5b4b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 12% 8%, rgba(255, 250, 239, .7), transparent 35%),
+        repeating-linear-gradient(0deg, rgba(112, 82, 48, .025) 0 1px, transparent 1px 5px),
+        var(--sand);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(100% - 28px, 680px);
+      margin: 0 auto;
+      padding: 30px 0 42px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 30px 24px 28px;
+      border: 1px solid rgba(239, 221, 190, .28);
+      border-radius: 7px 24px 8px 23px;
+      background: linear-gradient(145deg, #5c6957, #465748 78%);
+      color: #fffdf8;
+      box-shadow: 0 12px 30px rgba(38, 60, 53, .12);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -60px;
+      top: -78px;
+      border: 1px solid rgba(255, 253, 248, .22);
+      border-radius: 50%;
+      box-shadow: 0 0 0 22px rgba(255, 253, 248, .06), 0 0 0 48px rgba(255, 253, 248, .04);
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 7px;
+      color: #e8c8a2;
+      font-family: "Chalkboard SE", "DFKai-SB", "BiauKai", "STKaiti", cursive;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .15em;
+    }
+
+    .reunion-line {
+      position: relative;
+      z-index: 1;
+      margin: 3px 0 5px;
+      color: #f2d7b2;
+      font-family: "Chalkboard SE", "DFKai-SB", "BiauKai", "STKaiti", cursive;
+      font-size: 19px;
+      letter-spacing: .04em;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-family: "Chalkboard SE", "DFKai-SB", "BiauKai", "STKaiti", cursive;
+      font-size: clamp(32px, 9vw, 46px);
+      line-height: 1.2;
+      letter-spacing: .04em;
+    }
+
+    .hero-note {
+      position: relative;
+      z-index: 1;
+      margin: 12px 0 0;
+      color: rgba(255, 253, 248, .84);
+      font-size: 15px;
+    }
+
+    .today-route {
+      position: relative;
+      z-index: 1;
+      margin-top: 18px;
+      padding: 13px 15px 14px;
+      transform: rotate(-.4deg);
+      border: 1px solid rgba(120, 93, 56, .18);
+      border-radius: 5px 15px 7px 13px;
+      background:
+        repeating-linear-gradient(to bottom, transparent 0 27px, rgba(168, 91, 66, .16) 28px, transparent 29px),
+        #fff2d8;
+      color: var(--ink);
+      box-shadow: 0 5px 12px rgba(28, 42, 34, .12);
+    }
+
+    .today-label {
+      margin: 0 0 4px;
+      color: var(--terracotta);
+      font-family: "Chalkboard SE", "DFKai-SB", "BiauKai", "STKaiti", cursive;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .today-line {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 1.8;
+    }
+
+    .today-line span { color: var(--green); white-space: nowrap; }
+
+    .days { display: grid; gap: 20px; margin-top: 22px; }
+
+    .day {
+      padding: 22px 18px 8px;
+      border: 1px solid rgba(102, 86, 61, .08);
+      border-radius: 5px 19px 7px 17px;
+      background: linear-gradient(135deg, #fffaf0, #fbf2e2);
+      box-shadow: 0 7px 20px rgba(62, 50, 35, .07);
+    }
+
+    .day-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .day-number {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      place-items: center;
+      border-radius: 15px;
+      background: #f2e5d5;
+      color: var(--terracotta);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Chalkboard SE", "DFKai-SB", "BiauKai", "STKaiti", cursive;
+      font-size: 23px;
+      line-height: 1.25;
+    }
+
+    .day-subtitle { margin: 3px 0 0; color: var(--muted); font-size: 14px; }
+
+    .stop {
+      position: relative;
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 12px;
+      padding: 0 0 20px;
+    }
+
+    .stop:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 60px;
+      top: 14px;
+      bottom: -8px;
+      width: 2px;
+      border-radius: 2px;
+      background: linear-gradient(to bottom, #bd8065, var(--line));
+    }
+
+    .stop::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 53px;
+      top: 7px;
+      width: 14px;
+      height: 14px;
+      border: 3px solid var(--paper);
+      border-radius: 50%;
+      background: var(--terracotta);
+      box-shadow: 0 0 0 1px rgba(168, 91, 66, .38);
+    }
+
+    .time {
+      position: relative;
+      z-index: 2;
+      align-self: start;
+      padding: 3px 15px 3px 0;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--terracotta);
+      font-size: 14px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .stop h3 { margin: 0; font-size: 18px; line-height: 1.4; }
+    .place { margin: 3px 0 4px; color: var(--green); font-size: 14px; font-weight: 700; }
+    .description { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+
+    .stop-photo {
+      overflow: hidden;
+      margin: 12px 0 0;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #eee7dc;
+    }
+
+    .stop-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      filter: sepia(.12) saturate(.9);
+    }
+
+    .stop-photo figcaption {
+      padding: 6px 10px 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .stop-photo a { color: var(--green); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+    .note {
+      margin: 18px 4px 0;
+      padding: 14px 16px;
+      border: 1px solid #e5d5bd;
+      border-radius: 15px;
+      background: #fbf5e9;
+      color: #645b4e;
+      font-size: 14px;
+    }
+
+    .note strong {
+      color: var(--terracotta);
+      font-family: "Chalkboard SE", "DFKai-SB", "BiauKai", "STKaiti", cursive;
+      font-size: 16px;
+    }
+
+    footer {
+      padding: 22px 8px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (min-width: 600px) {
+      .page { padding-top: 46px; }
+      .hero { padding: 38px 36px 34px; }
+      .days { gap: 24px; margin-top: 26px; }
+      .day { padding: 26px 28px 10px; }
+      .stop { grid-template-columns: 76px minmax(0, 1fr); gap: 16px; }
+      .stop:not(:last-child)::before { left: 72px; }
+      .stop::after { left: 65px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">給老朋友的旅行便箋</p>
+      <p class="reunion-line">好久不見，終於又一起出發。</p>
+      <h1>台南兩天一夜</h1>
+      <p class="hero-note">想念的話，留給台南的巷弄和路上慢慢說。</p>
+      <section class="today-route" aria-label="今天的行程摘要">
+        <p class="today-label">今天去哪？第一天・府城老城線</p>
+        <p class="today-line"><span>10:30 牛肉湯</span> → <span>13:00 老屋咖啡</span></p>
+        <p class="today-line"><span>15:30 赤崁樓</span> → <span>18:30 台菜晚餐</span></p>
+      </section>
+    </header>
+
+    <div class="days">
+      <section class="day" aria-labelledby="day-one-title">
+        <div class="day-heading">
+          <span class="day-number">DAY 01</span>
+          <div>
+            <h2 id="day-one-title">第一天・老城散步</h2>
+            <p class="day-subtitle">抵達台南，從市中心慢慢逛起</p>
+          </div>
+        </div>
+
+        <article class="stop">
+          <time class="time">10:30</time>
+          <div>
+            <h3>暖暖牛肉湯（示意）</h3>
+            <p class="place">中西區・民權路一帶</p>
+            <p class="description">先用一碗熱湯暖胃，開啟台南的美食散步。</p>
+          </div>
+        </article>
+        <article class="stop">
+          <time class="time">13:00</time>
+          <div>
+            <h3>巷仔內老屋咖啡（示意）</h3>
+            <p class="place">中西區・神農街附近</p>
+            <p class="description">找間老屋咖啡店坐坐，看看街屋窗景與巷弄日常。</p>
+          </div>
+        </article>
+        <article class="stop">
+          <time class="time">15:30</time>
+          <div>
+            <h3>赤崁樓散步</h3>
+            <p class="place">中西區・民族路二段</p>
+            <p class="description">在古蹟與周邊街道走走，感受府城留下的歷史層次。</p>
+            <figure class="stop-photo">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fort_Provintia_(40247761364).jpg?width=1200" alt="台南赤崁樓的歷史建築與碑亭" loading="lazy">
+              <figcaption>赤崁樓｜照片：David Stanley，<a href="https://commons.wikimedia.org/wiki/File:Fort_Provintia_(40247761364).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>（CC BY 2.0）</figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="stop">
+          <time class="time">18:30</time>
+          <div>
+            <h3>阿霞小館（示意）</h3>
+            <p class="place">中西區・市中心</p>
+            <p class="description">晚餐安排幾道台菜與朋友分享，吃飽後回旅店休息。</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="day" aria-labelledby="day-two-title">
+        <div class="day-heading">
+          <span class="day-number">DAY 02</span>
+          <div>
+            <h2 id="day-two-title">第二天・海風與甜點</h2>
+            <p class="day-subtitle">睡飽出門，再把午後留給海邊</p>
+          </div>
+        </div>
+
+        <article class="stop">
+          <time class="time">09:30</time>
+          <div>
+            <h3>巷口早午餐（示意）</h3>
+            <p class="place">中西區・旅店周邊</p>
+            <p class="description">用一份簡單早餐補充精神，出發前往安平。</p>
+          </div>
+        </article>
+        <article class="stop">
+          <time class="time">11:00</time>
+          <div>
+            <h3>安平樹屋</h3>
+            <p class="place">安平區・古堡街</p>
+            <p class="description">看看老倉庫與榕樹交織的景色，拍幾張有趣的旅行照片。</p>
+            <figure class="stop-photo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/%E5%8E%9F%E8%8B%B1%E5%95%86%E5%BE%B7%E8%A8%98%E6%B4%8B%E8%A1%8C%EF%BC%88%E5%AE%89%E5%B9%B3%E6%A8%B9%E5%B1%8B%EF%BC%89.jpg" alt="榕樹根包覆老磚牆的安平樹屋" loading="lazy">
+              <figcaption>安平樹屋｜照片：WEI, WAN-CHEN（魏琬臻），<a href="https://commons.wikimedia.org/wiki/File:%E5%8E%9F%E8%8B%B1%E5%95%86%E5%BE%B7%E8%A8%98%E6%B4%8B%E8%A1%8C%EF%BC%88%E5%AE%89%E5%B9%B3%E6%A8%B9%E5%B1%8B%EF%BC%89.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>（CC BY-SA 4.0）</figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="stop">
+          <time class="time">13:30</time>
+          <div>
+            <h3>海邊日子冰店（示意）</h3>
+            <p class="place">安平區・安平路一帶</p>
+            <p class="description">吃碗冰或甜點消暑，順便歇歇腳、聊聊旅途趣事。</p>
+          </div>
+        </article>
+        <article class="stop">
+          <time class="time">15:30</time>
+          <div>
+            <h3>漁光島看海</h3>
+            <p class="place">安平區・漁光島</p>
+            <p class="description">沿著海岸散步吹風，替兩天一夜的小旅行收尾。</p>
+            <figure class="stop-photo">
+              <img src="https://www.twtainan.net/content/images/attractions/90483/640x480_attractions-image-r24yae9fnk6hljazjwl-lq.jpg" alt="漁光島沙灘與海岸景色" loading="lazy">
+              <figcaption>漁光島｜照片來源：<a href="https://www.twtainan.net/zh-cn/attractions/detail/5520" target="_blank" rel="noopener">台南旅遊網</a></figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <aside class="note"><strong>行程小提醒</strong>　店名與時間目前都是示意，之後再換成實際安排；出發前記得確認營業時間與交通方式。</aside>
+    <footer>台南慢慢走・把時間留給喜歡的人</footer>
+    <aside class="note">
+      <strong>行前提醒</strong><br>
+      天氣：示意，出發前查看台南天氣預報。<br>
+      要帶的東西：示意，水、雨具、防曬用品。<br>
+      集合時間：示意，第一天上午 10:00。
+    </aside>
+  </main>
+</body>
+</html>
